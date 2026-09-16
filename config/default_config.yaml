@@ -1,0 +1,34 @@
+branching:
+  main_branch: "main"
+  develop_branch: "develop"
+  feature_prefix: "feature/"
+  bugfix_prefix: "bugfix/"
+  release_prefix: "release/"
+  hotfix_prefix: "hotfix/"
+
+commit:
+  enforce_conventional: true
+  allowed_types:
+    - feat
+    - fix
+    - docs
+    - style
+    - refactor
+    - test
+    - chore
+    - perf
+    - ci
+  max_subject_length: 72
+  require_scope: false
+
+workflow:
+  require_branch_up_to_date: true
+  auto_delete_merged_branches: true
+  protected_branches:
+    - main
+    - develop
+
+changelog:
+  output: "CHANGELOG.md"
+  group_by_type: true
+  include_breaking: true
